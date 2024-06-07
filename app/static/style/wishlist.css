@@ -1,0 +1,62 @@
+:root {
+    --dark-purple: rgb(0, 4, 8); /* Updated to the darkest color */
+    --dark-yellow: rgb(53, 52, 82); /* Deep purple/blue as a substitute for yellow */
+    --rich-pink: rgb(17, 19, 23); /* A darker shade for contrast */
+    --background-gradient: linear-gradient(90deg, var(--dark-yellow) 0%, var(--dark-purple) 100%);
+    --button-bg-color: var(--rich-pink);
+    --button-hover-bg-color: rgb(17, 20, 26); /* A slightly lighter shade for hover effect */
+    --text-color: #eadb56; /* Kept white for high contrast */
+    --link-color: var(--rich-pink);
+    --link-hover-color: rgb(0, 3, 7); /* Darker shade for hover effect */
+    --modern-purple: #5A4E7C;
+    --dark-container-purple: #673AB7;
+    --strong-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #a4a0a0;
+}
+
+.wishlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    padding: 20px;
+}
+
+.movie {
+    flex: 0 1 22%; /* Allows for 4 images per row, with a bit of margin */
+    box-sizing: border-box;
+    padding: 10px; /* Spacing between images */
+}
+
+.movie img {
+    width: 100%;
+    max-width: 100%; /* Ensure image is not larger than the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to your images */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .movie {
+        flex: 0 1 48%; /* Adjust to 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie {
+        flex: 0 1 100%; /* Stack images on very small screens */
+    }
+}

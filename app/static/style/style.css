@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #350548 0%, #fa20ec 100%);
+    min-height: 100vh;
+
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Adjusts the main layout direction */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    padding: 30px 40px;
+    background: rgba(6, 1, 1, 0.777); /* Slight transparency to see the gradient */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.alien-play {
+    font-size: 36px;
+    text-align: top;
+    /* margin-top: 100px; Remove this line */
+    justify-content: center;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    color: #FFC107;
+    animation: Myopac;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes Myopac{
+    50%{opacity: 0;}
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.input-box input::placeholder {
+    color: #e0e0e0;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #030c0d9f;
+    color: #e9e030;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #2f053d;
+}
+
+.register-link p, .register-link p a {
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    color: #FFC107; /* Amber for alerts */
+    background-color: rgba(0, 0, 0, 0.668); /* Slightly transparent background */
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+

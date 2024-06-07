@@ -1,0 +1,28 @@
+.profileinfo{
+    border: 5px solid black;
+    background: rgba(0, 0, 0, 0.545);
+    text-align: center;
+
+
+}
+
+.accountdel{
+    border: 5px solid black;
+    background: rgba(0, 0, 0, 0.545);
+    text-align: center;
+
+}
+
+.secsection{
+    border: 5px solid black;
+    background: rgba(0, 0, 0, 0.545);
+    text-align: center;
+
+}
+
+.privatesec{
+    border: 5px solid black;
+    background: rgba(0, 0, 0, 0.545);
+    text-align: center;
+
+}

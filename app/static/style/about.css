@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    background: url('../images/APGBG.png') no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    position: fixed;
+    width: 900px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: rgb(242, 255, 3);
+    border-radius: 10px;
+    padding: 30px 40px;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.292);
+}
+
+.container h1{
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+
+
+}
+
+.keys{
+    font-size: 20px;
+    margin: 10px 0px;
+    text-decoration: underline;
+}
+
+.container p{
+    margin: 10px;
+}
+
+.commit{
+    font-size: 20px;
+    margin: 10px 0px;
+    text-decoration: underline;
+
+}
+

@@ -1,0 +1,55 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios'); // Import axios for making HTTP requests
+const sqlite3 = require('sqlite3').verbose(); // Import sqlite3 for database operations
+
+const app = express();
+const PORT = 3000;
+
+// Connect to the SQLite database (or create it if it doesn't exist)
+const db = new sqlite3.Database('users.db');
+
+// Create the users table if it doesn't exist
+db.serialize(() => {
+    db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, email TEXT, password TEXT)");
+});
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/register.html');
+});
+
+// Handle user registration
+app.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
+
+    // Insert new user into the database
+    db.run("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", [username, email, password], async function(err) {
+        if (err) {
+            console.error(err.message);
+            res.status(500).send('Error registering user.');
+        } else {
+            console.log(`A new user has been inserted with ID ${this.lastID}`);
+            
+            // Make an HTTP request to the Python script to send confirmation email
+            try {
+                await axios.post('http://localhost:4000/send-confirmation-email', {
+                    username: username,
+                    homepage_url: 'https://alien-playground.com'
+                });
+                
+                // Handle successful registration
+                res.send('Registration successful!');
+            } catch (error) {
+                // Handle error
+                console.error('Error sending confirmation email:', error.message);
+                res.status(500).send('Error registering user.');
+            }
+        }
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is listening at http://localhost:${PORT}`);
+});

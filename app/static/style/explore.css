@@ -1,0 +1,204 @@
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #350548 0%, #fa20ec 100%);
+    background-attachment: fixed;
+    color: #FFC107;
+    display: flex;
+    flex-direction: column; /* Keeps existing styling, allowing the topbox to be full-width */
+    align-items: center;
+    justify-content: flex-start; /* Changed to start to avoid centering vertically */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    max-width: 100%; /* Ensures the body doesn't exceed the viewport width */
+}
+
+
+
+
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    gap: 20px; /* Adjust this value as needed */
+    padding: 20px 0; /* Only vertical padding to avoid horizontal overflow */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    
+}
+
+.topbox {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107; /* Amber for contrast */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.profilebtn img{
+    max-width: 5%;
+    height: auto;
+    margin-left: 1200px;
+
+
+}
+
+
+
+.homebtn, .profilebtn {
+    color: #FFC107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.homebtn{
+    
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: nowrap;
+    margin-left: 50px;
+    
+}
+
+.homebtn:hover, .profilebtn:hover {
+    color: #FFFFFF; /* White on hover for visibility */
+}
+
+.searchsection {
+    width: 100%;
+    max-width: 400px; /* Limits the max width */
+    padding: 20px;
+    margin: 50px auto 0; /* Positions it below the topbox */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    flex: 1;
+
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    max-width: 40%; /* Limits the max width */
+    padding: 20px;
+    height:auto;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107; /* Slightly transparent */
+    border-radius: 10px;
+
+    margin: 50px 0px;
+    margin-right: 120px;
+    
+    text-align: center;
+    
+
+}
+
+.searchsection h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: calc(100% - 40px); /* Adjusts width accounting for padding */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #333366; /* Matches the primary color */
+    border-radius: 5px;
+    color: #000000;
+    outline: none; /* Removes the default focus outline */
+}
+
+#searchInput::placeholder {
+    color: #666; /* Lighter text for the placeholder */
+}
+
+#searchResults {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-height: 200px;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+#searchResults li {
+    padding: 10px;
+    border-bottom: 1px solid #333366; /* Subtle separation */
+    cursor: pointer;
+}
+
+#searchResults li:hover {
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107;
+}
+
+.container .box {
+    cursor: pointer;
+    margin: 20px 10px;
+
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107; /* Primary color */
+     /* Keeps button text readable */
+    border: none;
+    border-radius: 5px;
+   
+}
+
+.container .box:hover {
+    transform: scale(1.05); /* Slight scale for interactivity */
+    background-color: #FF9900;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107; /* Primary color */
+    color: #FFFFFF; /* Keeps button text readable */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9900; /* Accent color for button hover */
+}
+
+#searchInput:focus {
+    border-color: #FF9900; /* Highlights the input field when focused */
+}
+
+
+

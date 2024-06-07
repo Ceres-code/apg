@@ -1,0 +1,235 @@
+:root {
+    --background-gradient: linear-gradient(135deg, #350548 0%, #fa20ec 100%);
+    --text-color: #FFFFFF;
+    --accent-color: #FFC107; /* Amber color for highlights and links */
+    --container-bg-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black for containers */
+    --button-bg-color: #673AB7; /* Modern purple for buttons */
+    --button-hover-bg-color: #5A4E7C; /* Lighter purple for button hover effects */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Unified shadow for depth */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    background-attachment: fixed; /* Fix gradient background */
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organize content in a column */
+    align-items: center; /* Center align the content */
+}
+
+.navbar, .profile-area, .footer-area, .lists-links, .friends, .top-movies, .user-actions, .username-change, .search-box, .propicup, .top-directors {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 90%; /* Standardize width for responsiveness */
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease;
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.selected-img {
+    border: 2px solid #FFC107; /* Or any color that stands out */
+    opacity: 0.7;
+}
+
+
+.modal img{
+    max-width: 20%;
+    height: auto;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.list-link, .wishbtn, .button, input[type="submit"] {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.nav-link{
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+.nav-link:hover, .list-link:hover, .wishbtn:hover, .button:hover, input[type="submit"]:hover {
+    background-color: var(--button-hover-bg-color);
+    color: var(--text-color);
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px; /* Adjust based on desired container size */
+}
+
+.movie {
+    flex: 1 1 150px; /* Allows flex items to grow and shrink but not beyond 150px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie img {
+    width: 150px; /* Reduced width for smaller images */
+    height: 200px; /* Adjust height accordingly */
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+}
+
+.director-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px; /* Adjust based on desired container size */
+}
+
+.director {
+    flex: 1 1 150px; /* Allows flex items to grow and shrink but not beyond 150px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.director img {
+    width: 150px; /* Reduced width for smaller images */
+    height: 200px; /* Adjust height accordingly */
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.director img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 100px; /* Adjusted for smaller size */
+    height: 100px; /* Ensure uniform image size */
+    margin: 0 auto; /* Center align the image */
+}
+
+.messaging-icon img{
+    max-width: 3%;
+    height: auto;
+    margin-left: 1300px;
+}
+
+/* Use Flexbox for layout consistency */
+.profile-header, .user-actions, .edit-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Adjusting for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar, .profile-area, .footer-area, .lists-links, .friends, .top-movies, .user-actions, .username-change, .search-box, .propicup {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+
+.alert {
+    position: fixed; /* Make the alert fixed */
+    bottom: 0; /* Position it at the bottom */
+    left: 50%; /* Position it at the center horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    color: #FFC107; /* Amber for alerts */
+    background-color: rgba(0, 0, 0, 0.668); /* Slightly transparent background */
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    animation: fadeOut 5s forwards; /* Animation to fade out after 3 seconds */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

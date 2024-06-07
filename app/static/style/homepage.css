@@ -1,0 +1,209 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #350548 0%, #fa20ec 100%);
+    background-attachment: fixed; /* Ensure the gradient is fixed during scrolling */
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Adjusts the main layout direction */
+}
+
+/* Top navigation bar */
+.topbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    color: #FFC107; /* Amber for contrast */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+
+
+
+.m_pop, .m_up, .m_play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.638);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.358);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    white-space: nowrap;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px 50px;
+    
+    
+    
+}
+
+
+.m_pop{
+    z-index: 1;
+}
+
+.m_up{
+    z-index: 2;
+}
+
+
+.m_play{
+    z-index: 3;
+}
+
+/* Adjustments for overlapping tabs */
+.movienews a {
+    position: relative;
+    margin-left: -20px; /* Adjust for desired overlap */
+    transition: margin 0.3s, z-index 0s 0.3s;
+    color:#FFC107;
+    text-decoration: none;
+}
+
+.movienews a:hover, .movienews a.active {
+    margin-left: 0;
+    z-index: 2;
+    color: #FFC107; /* Highlight active tab */
+    background-color: #121212; /* Contrast for active tab */
+    border-radius: 5px;
+}
+
+.movienews{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+
+
+.homebtn, .profilebtn {
+    color: #FFC107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.homebtn{
+    margin-left: 200px;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: nowrap;
+    
+}
+
+.homebtn:hover, .profilebtn:hover {
+    color: #FFFFFF; /* White on hover for visibility */
+}
+
+/* Sidebar navigation */
+.aliennav {
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    padding: 20px;
+    width: 200px; /* Fixed width for the sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.aliennav a, .startbtn, .logout {
+    color: #FFC107;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.aliennav a:hover, .startbtn:hover, .logout:hover {
+    background-color: rgba(255, 193, 7, 0.2); /* Lighter amber on hover */
+    border-radius: 5px;
+}
+
+.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profilebtn img{
+    max-width: 5%;
+    height: auto;
+    margin-left: 1200px;
+
+
+}
+
+.movie {
+    width: 200px; /* Adjust based on your layout */
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.358);
+    background: rgba(0, 0, 0, 0.638);
+    padding: 10px;
+    border-radius: 15px;
+    color: #FFC107;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+    border-radius: 15px;
+}
+
+.movie h3 {
+    margin: 5px 0;
+    color: white;
+}
+
+.movie p {
+    font-size: 14px;
+}
+
+/* Footer */
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFC107;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sourcedetails, .tmdblogo {
+    display: flex;
+    align-items: center;
+}
+
+.tmdblogo img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Movie section */
+.movie-section {
+    padding: 20px;
+    margin-top: 60px; /* Space for topbox */
+    margin-left: 220px; /* Space for .aliennav */
+    margin-bottom: 60px; /* Space for .foot */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

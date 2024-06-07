@@ -1,0 +1,163 @@
+
+  
+
+
+
+
+
+body {
+    background: url('../images/APGBG.png') no-repeat;
+    background-size: cover;
+    color: yellow;
+
+}
+
+.movie-container{
+
+    border: 3px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin-left: 250px;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+
+}
+.profile-container a {
+    text-decoration: none;
+    color: yellow;
+    border: 3px solid rgb(33, 7, 33);
+    padding: 10px 40px;
+    background: rgb(51, 4, 51);
+    
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+  
+
+
+ 
+.default-profile-picture {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    background-color: #ddd;
+    margin-top: 20px; 
+}
+   
+.editbtn button{
+    padding: 10px 20px;
+    background: purple;
+    color: yellow;
+    border: 3px solid yellow;
+    cursor: pointer;
+
+}
+
+.editbtn button:hover{
+    background:rgba(43, 3, 43, 0.864);
+}
+
+.editbtn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilebox{
+    border: 3px solid yellow;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(55, 5, 55, 0.804);
+    margin: 50px 500px;
+}
+
+.top10title{
+    margin-left: 45%;
+    border: 3px solid yellow;
+    background: rgb(44, 5, 44);
+
+}
+
+.profilebtn{
+    font-size: 18px;
+    color: yellow;
+    border: 2px solid yellow;
+    background: rgba(69, 2, 69, 0.771);
+    padding: 10px 20px;
+
+    left: 0;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+
+
+}
+
+.homebtn {
+    font-size: 24px;
+    justify-content: center;
+    text-shadow: black;
+    margin: 10px;
+    text-align: center;
+    color: rgb(231, 218, 75);
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+
+}
+
+.top10title{
+    box-sizing: border-box;
+    left: 500px;
+}
+
+.topbox{
+    display: flex;
+    top: 0;
+    width: 100%;
+    background: rgb(36, 2, 36);
+
+
+    
+}
+
+.messaging-icon{
+    max-width: 25%;
+    height: auto;
+}
+
+.profilebtn:hover{
+    background-color: #2b023d65;
+}
+
+.movie-container img{
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
+}
+    
+.usertitle{
+    text-transform: capitalize;
+}
+
+
+
+
+

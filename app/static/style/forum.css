@@ -1,0 +1,148 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #350548 0%, #fa20ec 100%);
+    background-attachment: fixed; /* Ensure the gradient is fixed during scrolling */
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Adjusts the main layout direction */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Adjusted styles for forum content */
+.container {
+    width: 900px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.316);
+    color: #FFC107; /* Amber color for text */
+    border-radius: 10px;
+    padding: 30px 40px;
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.292);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+
+h1, .post h2, .post p {
+    text-align: center;
+}
+
+.post {
+    background-color: rgba(0, 0, 0, 0.8); /* Making post backgrounds slightly transparent */
+    color: #FFC107; /* Amber color for text within posts */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+form, textarea, .posttext {
+    margin: 20px auto; /* Centering forms and text areas */
+    display: block;
+}
+
+textarea {
+    width: calc(100% - 20px); /* Adjust width to fit container */
+    height: 100px;
+    resize: none;
+    background: rgba(0, 0, 0, 0.638); /* Slightly transparent black */
+    color: #FFC107; /* Amber color for text */
+    border: 2px solid #FFC107;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    background-color: #FFC107;
+    color: #121212;
+    padding: 10px 30px;
+    border: 2px solid #FFC107;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 20px auto; /* Centering the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #350548;
+}
+
+.posttext {
+    color: #FFC107;
+    background: rgba(0, 0, 0, 0.773);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: blue;
+    color: white;
+}
+
+
+.container a{
+    font-size: 18px;
+    color: yellow;
+    text-decoration: none;
+    margin: 50px 0px;
+    border: 3px solid yellow;
+    padding: 20px;
+    margin: 30px;
+}
+
+.topbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 20px;
+    width: 90%;
+    
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    
+    background: rgba(0, 0, 0, 0.585); /* Slightly transparent black */
+    color: #f8eccb; /* Amber for contrast */
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.homebtn, .profilebtn {
+    color: #f4edd8e3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.homebtn{
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+
+.profilebtn{
+    max-width: 20%;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+

@@ -1,0 +1,51 @@
+.search-result {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.search-result img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.movie-image-container {
+position: relative;
+}
+
+.add-button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    color: black;
+    border-radius: 50%; /* To create a circular button */
+    width: 30px; /* Adjust the width of the button */
+    height: 30px; /* Adjust the height of the button */
+    line-height: 30px; /* Center the plus sign vertically */
+    text-align: center; /* Center the plus sign horizontally */
+    font-size: 20px; /* Adjust the size of the plus sign */
+    cursor: pointer;
+    z-index: 1; /* Ensure it's above the image */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px; /* Adjust the top position of the dropdown menu */
+    right: 0;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+}
+
+.movie:hover .dropdown-menu {
+    display: block;
+}
